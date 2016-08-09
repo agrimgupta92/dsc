@@ -13,7 +13,7 @@ Configuration MyService
 		{
 			Ensure = 'Present'
 			Name = 'HelloWorld'
-			Path = 'https://github.com/agrimgupta92/dsc/blob/master/HelloWorld.exe'
+			Path = 'C:\dsc\HelloWorld.exe'
 			ProductId = ''
 		}
 		xFirewall HTTP

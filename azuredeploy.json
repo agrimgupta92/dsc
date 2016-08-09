@@ -157,7 +157,7 @@
         },
         "configurationURI": {
             "type": "string",
-            "defaultValue": "https://github.com/agrimgupta92/dsc/blob/master/webServer.ps1",
+            "defaultValue": "https://raw.githubusercontent.com/agrimgupta92/dsc/master/webServer.ps1",
             "metadata": {
                 "description": "The URI for the DSC configuration "
             }
