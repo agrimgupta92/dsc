@@ -3,13 +3,13 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "domainNamePrefix": {
-            "value": "agrim1"
+            "value": "agrima1"
         },
         "vmssName": {
-            "value": "agrim2"
+            "value": "agrima2"
         },
         "adminUsername": {
-            "value": "agrim3"
+            "value": "agrima3"
         },
         "adminPassword": {
             "value": "rdPassw0rd"
