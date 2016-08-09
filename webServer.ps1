@@ -13,7 +13,7 @@ Configuration MyService
 		{
 			Enusre = 'Present'
 			Name = 'HelloWorld'
-			Source = 'C:\dsctemp\HelloWorld.exe'
+			Source = 'https://github.com/agrimgupta92/dsc/blob/master/HelloWorld.zip'
 		}
 		xFirewall HTTP
 		{
