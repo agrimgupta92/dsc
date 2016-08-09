@@ -11,9 +11,10 @@ Configuration MyService
 		}
 		Package HelloWorld
 		{
-			Enusre = 'Present'
+			Ensure = 'Present'
 			Name = 'HelloWorld'
-			Source = 'https://github.com/agrimgupta92/dsc/blob/master/HelloWorld.zip'
+			Path = 'https://github.com/agrimgupta92/dsc/blob/master/HelloWorld.exe'
+			ProductId = ''
 		}
 		xFirewall HTTP
 		{
