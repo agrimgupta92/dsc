@@ -9,7 +9,7 @@ Configuration MyService
 			Ensure = 'Present'
 			Name = 'Web-Server'
 		}
-		WindowsFeature HelloWorld
+		Package HelloWorld
 		{
 			Enusre = 'Present'
 			Name = 'HelloWorld'

@@ -281,20 +281,6 @@
                     }
                 },
                 {
-                    "name": "[concat(parameters('automationAccountName'), '/HelloWorld']",
-                    "type": "microsoft.automation/automationAccounts/Modules",
-                    "apiVersion": "[variables('automationApiVersion')]",
-                    "tags": {},
-                    "dependsOn": [
-                        "[concat('Microsoft.Automation/automationAccounts/', parameters('automationAccountName'))]"
-                    ],
-                    "properties": {
-                        "contentLink": {
-                            "uri": "https://github.com/agrimgupta92/dsc/blob/master/HelloWorld.zip"
-                        }
-                    }
-                },
-                {
                     "name": "[parameters('configurationName')]",
                     "type": "Configurations",
                     "apiVersion": "[variables('automationApiVersion')]",
