@@ -28,6 +28,7 @@ Configuration MyService
 	        Type = 'Directory'
 	        Recurse = $true
 	        SourcePath = 'C:\dsc\HelloWorld'
+	        DestinationPath = 'C:\dsc\HelloWorld'
     	}
 	}
 }
