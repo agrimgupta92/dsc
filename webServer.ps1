@@ -9,13 +9,6 @@ Configuration MyService
 			Ensure = 'Present'
 			Name = 'Web-Server'
 		}
-		Package HelloWorld
-		{
-			Ensure = 'Present'
-			Name = 'HelloWorld'
-			Path = 'C:\dsc\HelloWorld.exe'
-			ProductId = ''
-		}
 		xFirewall HTTP
 		{
 			Name = 'WebServer-HTTP-In-TCP'
