@@ -22,5 +22,12 @@ Configuration MyService
 			LocalPort = 80
 			DependsOn = '[WindowsFeature]webServer'
 		}
+		File HelloWorld
+        {
+	        Ensure = 'Present'
+	        Type = 'Directory'
+	        Recurse = $true
+	        SourcePath = 'C:\dsc\HelloWorld'
+    	}
 	}
 }
