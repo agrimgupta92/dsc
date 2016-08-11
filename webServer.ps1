@@ -1,34 +1,13 @@
 Configuration MyService
 {
-    Import-DSCResource -ModuleName PSDesiredStateConfiguration, xNetworking
+    Import-DSCResource -ModuleName PSDesiredStateConfiguration
 	
-	Node webServer
-	{
-		WindowsFeature webServer
-		{
-			Ensure = 'Present'
-			Name = 'Web-Server'
-		}
-		xFirewall HTTP
-		{
-			Name = 'WebServer-HTTP-In-TCP'
-			Group = 'Web Server'
-			Ensure = 'Present'
-			Action = 'Allow'
-			Enabled = 'True'
-			Profile = 'Any'
-			Direction = 'Inbound'
-			Protocol = 'TCP'
-			LocalPort = 80
-			DependsOn = '[WindowsFeature]webServer'
-		}
-		File HelloWorld
-        {
-	        Ensure = 'Present'
-	        Type = 'Directory'
-	        Recurse = $true
-	        SourcePath = 'C:\dsc\HelloWorld'
-	        DestinationPath = 'C:\dsc\HelloWorld'
-    	}
+	File HelloWorld
+    {
+        Ensure = 'Present'
+        Type = 'Directory'
+        Recurse = $true
+        SourcePath = '.\HelloWorld'
+        DestinationPath = 'C:\dsc\HelloWorld'
 	}
 }
