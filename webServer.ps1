@@ -5,7 +5,7 @@ Configuration MyService
 	File HelloWorld
     {
         Ensure = 'Present'
-        DestinationPath = 'C:\dsc\HelloWorld'
+        DestinationPath = 'C:\HelloWorld'
         Contents = "Hello there fair traveler!"
 	}
 }
