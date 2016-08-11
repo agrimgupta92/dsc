@@ -5,9 +5,7 @@ Configuration MyService
 	File HelloWorld
     {
         Ensure = 'Present'
-        Type = 'Directory'
-        Recurse = $true
-        SourcePath = '.\HelloWorld'
         DestinationPath = 'C:\dsc\HelloWorld'
+        Contents = "Hello there fair traveler!"
 	}
 }
