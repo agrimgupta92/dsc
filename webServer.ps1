@@ -4,8 +4,10 @@ Configuration MyService
 	
 	File HelloWorld
     {
-        Ensure = 'Present'
-        DestinationPath = 'C:\HelloWorld'
-        Contents = "Hello there fair traveler!"
+        Ensure = "Present"  
+        Type = "Directory" 
+        Recurse = $true 
+        SourcePath = "\HelloWorld"
+        DestinationPath = "C:\HelloWorldPackage" 
 	}
 }
