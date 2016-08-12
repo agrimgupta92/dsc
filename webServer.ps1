@@ -1,8 +1,7 @@
 Configuration MyService
 {
     Import-DSCResource -ModuleName PSDesiredStateConfiguration
-	$invocation = (Get-Variable MyInvocation).Value
-    $directorypath = Split-Path $invocation.MyCommand.Path
+    $directorypath = (Get-Item -Path ".\" -Verbose).FullName
     $settingspath = $directorypath + '\HelloWorld'
 	File HelloWorld
     {
