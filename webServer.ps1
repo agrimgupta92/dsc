@@ -9,8 +9,8 @@ Configuration MyService
     File WebContent  
     {  
         Ensure          = 'Present'  
-        SourcePath      = "$PSScriptRoot\HelloWorldPackage"
-        DestinationPath = 'C:\HelloWorldPackage' 
+        SourcePath      = "$PSScriptRoot\HelloWorld"
+        DestinationPath = 'C:\Package' 
         Recurse         = $true  
         Type            = 'Directory'   
     }
