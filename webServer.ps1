@@ -8,7 +8,7 @@ Configuration MyService
         Ensure = "Present"  
         Type = "Directory" 
         Recurse = $true 
-        SourcePath = $settingspath
+        SourcePath = "$settingspath"
         DestinationPath = "C:\HelloWorldPackage" 
 	}
 }
