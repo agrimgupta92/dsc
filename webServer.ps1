@@ -14,6 +14,7 @@ Configuration MyService
         Recurse         = $true  
         Type            = 'Directory'  
         Force           = $true 
+        Checksum        = 'SHA-256'
     }
 
     File WebContentNext  
@@ -24,5 +25,6 @@ Configuration MyService
         Recurse         = $true  
         Type            = 'Directory'   
         Force           = $true
+        Checksum        = 'SHA-256'
     }
 }
