@@ -12,7 +12,8 @@ Configuration MyService
         SourcePath      = "$PSScriptRoot\HelloWorld"
         DestinationPath = 'C:\Package2' 
         Recurse         = $true  
-        Type            = 'Directory'   
+        Type            = 'Directory'  
+        Force           = $true 
     }
 
     File WebContentNext  
@@ -22,5 +23,6 @@ Configuration MyService
         DestinationPath = 'C:\Package' 
         Recurse         = $true  
         Type            = 'Directory'   
+        Force           = $true
     }
 }
