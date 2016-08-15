@@ -15,7 +15,7 @@ Configuration MyService
         Type            = 'Directory'   
     }
 
-    File WebContent  
+    File WebContentNext  
     {  
         Ensure          = 'Present'  
         SourcePath      = "$PSScriptRoot\HelloWorld"
