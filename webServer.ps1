@@ -10,7 +10,7 @@ Configuration MyService
     {  
         Ensure          = 'Present'  
         SourcePath      = "$PSScriptRoot\HelloWorld"
-        DestinationPath = 'C:\Package' 
+        DestinationPath = 'C:\Package2' 
         Recurse         = $true  
         Type            = 'Directory'   
     }
