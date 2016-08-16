@@ -17,4 +17,10 @@ Configuration MyService
         Checksum        = 'SHA-256'
     }
 
+    WindowsProcess TestRun
+    {
+        Path      = 'C:\RunningService\HelloWorld.exe'
+        Arguments = ''
+        DependsOn = "[File]WebContent"
+    }
 }
