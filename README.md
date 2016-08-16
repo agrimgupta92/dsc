@@ -1,2 +1,2 @@
 # dsc
-Temporary Repo for hosing content.
+Temporary Repo for hosting content.
