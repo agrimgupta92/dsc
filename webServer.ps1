@@ -1,6 +1,6 @@
 Configuration MyService
 {
-    Import-DscResource -ModuleName PSDesiredStateConfiguration
+    Import-DscResource -Name MSFT_xServiceResource -ModuleName xPSDesiredStateConfiguration
 
     WindowsFeature IIS  
     {  
@@ -19,7 +19,7 @@ Configuration MyService
         Checksum        = 'SHA-256'
     }
 
-    Service RunningExample
+    xService RunningExample
     {
         Name           = "ExampleService"
         StartupType    = "Automatic"
@@ -27,6 +27,9 @@ Configuration MyService
         DependsOn      = "[File]WebContent"  
         Path           = "C:\RunningService\HelloWorld.exe"
         BuiltInAccount = "LocalSystem"
+        Ensure         = "Present"
     }
 
 }
+
+MyService
