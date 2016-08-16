@@ -19,17 +19,4 @@ Configuration MyService
         Checksum        = 'SHA-256'
     }
 
-    xService RunningExample
-    {
-        Name           = "ExampleService"
-        StartupType    = "Automatic"
-        State          = "Running"
-        DependsOn      = "[File]WebContent"  
-        Path           = "C:\RunningService\HelloWorld.exe"
-        BuiltInAccount = "LocalSystem"
-        Ensure         = "Present"
-    }
-
 }
-
-MyService
