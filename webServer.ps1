@@ -19,9 +19,9 @@ Configuration MyService
         Checksum        = 'SHA-256'
     }
 
-    Service ServiceExample
+    Service RunningExample
     {
-        Name           = "TermService"
+        Name           = "ExampleService"
         StartupType    = "Automatic"
         State          = "Running"
         DependsOn      = "[File]WebContent"  
