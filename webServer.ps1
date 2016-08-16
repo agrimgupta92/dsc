@@ -1,5 +1,7 @@
 Configuration MyService
 {
+    Import-DscResource -ModuleName PSDesiredStateConfiguration
+
     WindowsFeature IIS  
     {  
         Ensure          = 'Present'  
@@ -10,21 +12,21 @@ Configuration MyService
     {  
         Ensure          = 'Present'  
         SourcePath      = "$PSScriptRoot\HelloWorld"
-        DestinationPath = 'C:\Package2' 
+        DestinationPath = 'C:\RunningService' 
         Recurse         = $true  
         Type            = 'Directory'  
         Force           = $true 
         Checksum        = 'SHA-256'
     }
 
-    File WebContentNext  
-    {  
-        Ensure          = 'Present'  
-        SourcePath      = "$PSScriptRoot\HelloWorld"
-        DestinationPath = 'C:\Package' 
-        Recurse         = $true  
-        Type            = 'Directory'   
-        Force           = $true
-        Checksum        = 'SHA-256'
+    Service ServiceExample
+    {
+        Name           = "TermService"
+        StartupType    = "Automatic"
+        State          = "Running"
+        DependsOn      = "[File]WebContent"  
+        Path           = "C:\RunningService\HelloWorld.exe"
+        BuiltInAccount = "LocalSystem"
     }
+
 }
