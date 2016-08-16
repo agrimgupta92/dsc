@@ -1,7 +1,5 @@
 Configuration MyService
 {
-    Import-DscResource -Name MSFT_xServiceResource -ModuleName xPSDesiredStateConfiguration
-
     WindowsFeature IIS  
     {  
         Ensure          = 'Present'  
