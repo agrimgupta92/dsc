@@ -6,6 +6,13 @@ Configuration MyService
         Name            = 'Web-Server'  
     }
 
+    WindowsProcess CheckProcess
+    {
+        Path      = 'C:\RunningService\HelloWorld.exe'
+        Arguments = ''
+        Ensure    = 'Absent'
+
+    }
     File WebContent  
     {  
         Ensure          = 'Present'  
@@ -15,6 +22,7 @@ Configuration MyService
         Type            = 'Directory'  
         Force           = $true 
         Checksum        = 'SHA-256'
+        DependsOn       = "[WindowsProcess]CheckProcess"
     }
 
     WindowsProcess TestRun
